@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height:100vh;
+    width:100vw;
+    background-image: url("bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 1rem;
+    height:auto;
+    width:70vw;
+    background-color: rgba(78, 237, 255, 0.2);
+    border: solid rgba(255, 255, 255, 0.7) 3px;
+    border-radius: 4px;
+    text-align: center;
+    color:#fff;
+    backdrop-filter: blur(0.15rem);
+}
+hr{
+    width:90%;
+    margin:1rem 0 1rem 5%;
+}
+
+.box-container{
+    display: grid;
+    gap: 0.3rem ;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-areas: 
+    "result"
+    "num num num sym"
+    "num num num sym"
+    "num num num sym"
+    "sym num sym equate"; */
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255,0.8);
+    height:min(3rem,12vh);
+    width:auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-weight:700;
+}
+.buttons:hover{
+    background-color: rgba(95, 220, 255, 0.5);
+}
+
+#result{
+    justify-content:right;
+    grid-column: span 4;
+    background-color: rgb(33, 33, 33);
+    border: 0.5rem solid rgb(39, 39, 39);
+    color:rgba(255, 255, 255, 0.623)
+}
+h6{
+    color: rgb(110, 133, 176);
+    font-weight: 200;
+    position: absolute;
+    z-index: 3;
+    padding:0.2rem;
+}
