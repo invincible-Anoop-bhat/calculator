@@ -64,4 +64,5 @@ function clean() {
     num1="0";
     num2="";
     operator="";
+    res=0;
 }
