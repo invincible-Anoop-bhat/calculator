@@ -12,20 +12,23 @@ function added(num) {
         document.getElementById("result").innerHTML=num1;
     }else{
         num2+=num
-        switch(operator){
-            case '+':   res=parseFloat(num1)+parseFloat(num2);
-                        break;
-            case '-':   res=parseFloat(num1)-parseFloat(num2)
-                break;
-            case 'x':   res=parseFloat(num1)*parseFloat(num2)
-                break;
-            case '/':   res=parseFloat(num1)/parseFloat(num2)
-                break;
-        }
-        res = parseFloat(res.toFixed(4));
+        calcres();
         console.log(num1+operator+num2+'='+res);
         document.getElementById("result").innerHTML=(num1+" "+operator+" "+num2+" = "+res);
     }
+}
+function calcres() {
+    switch(operator){
+        case '+':   res=parseFloat(num1)+parseFloat(num2);
+                    break;
+        case '-':   res=parseFloat(num1)-parseFloat(num2)
+            break;
+        case 'x':   res=parseFloat(num1)*parseFloat(num2)
+            break;
+        case '/':   res=parseFloat(num1)/parseFloat(num2)
+            break;
+    }
+    res = parseFloat(res.toFixed(4));
 }
 
 function dot() {
@@ -45,16 +48,20 @@ function dot() {
         if(num2.indexOf('.')==-1){
             num2+=".";
         }
+        calcres()
         document.getElementById("result").innerHTML=(num1+" "+operator+" "+num2+" = "+res);
        
     }
 }
 
 function op(sym) {
-    if(operator!=""){
+    if(operator!="" && num2!=""){
         num1 = res.toString();
         num2="";
     }
+    // else if(operator!=""&&num2==""){
+
+    // }
     operator=sym
     document.getElementById("result").innerHTML=num1+" "+sym
 }
