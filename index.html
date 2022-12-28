@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css",content="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="script.js"></script>
     <title>Calculator</title>
 </head>
-<body>
+<body onkeydown="keypress(event.key)">
     <div class="container">
         <h2>Calculator</h2>
         <hr>
         <div class="box-container">
             <div class="buttons" id="result">result </div>
+            <div class="buttons" onclick="erase()"><span style="font-size:1.8rem;" class="material-symbols-outlined">backspace</span></div>
             <div class="buttons" onclick="added('7')">7</div>
             <div class="buttons" onclick="added('8')">8</div>
             <div class="buttons" onclick="added('9')">9</div>
